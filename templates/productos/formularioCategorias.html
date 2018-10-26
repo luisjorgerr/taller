@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	{% block content %}
+        <h1>Nueva categoria</h1>
+        <form action="{% url 'productos:agregarCategoria'%}" method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Enviar">
+        </form>
+    {% endblock %}
+</body>
+</html>
